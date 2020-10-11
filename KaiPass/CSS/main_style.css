@@ -605,8 +605,8 @@ input{
 .wrapper_nav{
     right: 0;
     top: 70px;
-    width: 20%;
-    height: 50vh;
+    width: 17%;
+    height: 60vh;
     background-color: #FFFFFF;
     z-index: 1000;
     position: fixed;
@@ -614,6 +614,13 @@ input{
     -webkit-box-shadow: 0px 4px 12px 0px rgba(148,148,148,0.77);
     -moz-box-shadow: 0px 4px 12px 0px rgba(148,148,148,0.77);
     box-shadow: 0px 4px 12px 0px rgba(148,148,148,0.77);
+}
+
+.header input[type="checkbox"]:checked ~ .wrapper_nav{
+    display: block;
+    transform: translateX(0);
+    transform-origin: right;
+    transition: 0.5s;
 }
 
 /*CheckAnimation*/
@@ -681,4 +688,32 @@ input{
     font-weight: 500;
     margin-top: 5px;
     margin-bottom: 12px;
+}
+.uc{
+    text-align: center;
+    font-size: 40px;
+}
+.fl{
+    text-align: center;
+}
+.imghd{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 60px;
+}
+.header input{
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    cursor: pointer;
+}
+.coming-soon{
+    display: block;
+    padding: 50% auto;
 }
