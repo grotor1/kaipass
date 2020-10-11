@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/kaipass/static/css/main.459d0bd2.chunk.css",
+    "main.js": "/kaipass/static/js/main.aced0e56.chunk.js",
+    "main.js.map": "/kaipass/static/js/main.aced0e56.chunk.js.map",
+    "runtime-main.js": "/kaipass/static/js/runtime-main.62559329.js",
+    "runtime-main.js.map": "/kaipass/static/js/runtime-main.62559329.js.map",
+    "static/js/2.10abca65.chunk.js": "/kaipass/static/js/2.10abca65.chunk.js",
+    "static/js/2.10abca65.chunk.js.map": "/kaipass/static/js/2.10abca65.chunk.js.map",
+    "index.html": "/kaipass/index.html",
+    "precache-manifest.a10c30539da6d6dbe8157415fd8ba371.js": "/kaipass/precache-manifest.a10c30539da6d6dbe8157415fd8ba371.js",
+    "service-worker.js": "/kaipass/service-worker.js",
+    "static/css/main.459d0bd2.chunk.css.map": "/kaipass/static/css/main.459d0bd2.chunk.css.map",
+    "static/js/2.10abca65.chunk.js.LICENSE.txt": "/kaipass/static/js/2.10abca65.chunk.js.LICENSE.txt",
+    "static/media/background_fudzi.png": "/kaipass/static/media/background_fudzi.5b473fe2.png",
+    "static/media/eye-close.svg": "/kaipass/static/media/eye-close.2f5bb78f.svg",
+    "static/media/eye-open.svg": "/kaipass/static/media/eye-open.9414bddc.svg",
+    "static/media/facebook.svg": "/kaipass/static/media/facebook.02674130.svg",
+    "static/media/google-plus 1.svg": "/kaipass/static/media/google-plus 1.dd65d12d.svg",
+    "static/media/right-arrow.svg": "/kaipass/static/media/right-arrow.a2954d4f.svg",
+    "static/media/svg-wave_pink.svg": "/kaipass/static/media/svg-wave_pink.d83893cd.svg",
+    "static/media/svg-wave_white.svg": "/kaipass/static/media/svg-wave_white.a0980c08.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62559329.js",
+    "static/js/2.10abca65.chunk.js",
+    "static/css/main.459d0bd2.chunk.css",
+    "static/js/main.aced0e56.chunk.js"
+  ]
+}
