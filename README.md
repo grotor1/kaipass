@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Problem & Market size
+According to *Washington post* 
+62 percent of people suffered from boredom during the lock down.
+Narrowing it down to the number of active internet users we 
+get 0,5 billion people. Being bored can affect your mental
+health and that is the problem we solve.
 
-## Available Scripts
+## Solution
+KaiPass is based on the principles from Kaizen¹ theory
+merged with popular nowadays promotion model "Battle pass²".
+KaiPass will not only entertain you but also will
+help to improve many aspects of your life
 
-In the project directory, you can run:
+1.Kaizen is Japanese for “change for better”
+2.Battle pass is a type of monetization approach rewarding
+the player with in-game items for playing the game and 
+completing specific challenges
 
-### `npm start`
+## How does it work
+Everything is pretty simple.
+Every user has daily, weekly and monthly tasks which are divided into
+different categories and directed to improve different 
+aspects of life. Every challenge taken upgrades KaiPass level and gives
+awards for your profile customization.
+But this idea is not fun without the competition. You can track 
+your friends' progress and try to beat them.
+Also there is an achievement system that will show to your friends 
+your successes in sports, education, Etc.
+This should encourage you to daily improve yourself with Kaizen principles. 
+Every day you will get closer to the goal you set.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To the moment frontend is ready for eighty percent but we have troubles
+with backend especially with data base(there is no data base) cause our teammate got sick)(
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Plans for future
+Stay turned - we have many great ideas how to develop our project:
+- we are working on mobile app
+- we are going to add awards and subscriptions for
+thematic services
