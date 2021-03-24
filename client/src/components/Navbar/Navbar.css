@@ -1,0 +1,205 @@
+:root{
+    --cblack: #2A363B;
+    --cred: #E84A5F;
+    --cpink: #FF847C;
+}
+
+.navbar{
+    width: 330px;
+    height: 100vh;
+    background-color: #ffffff;
+    -webkit-box-shadow: 30px 6px 52px -37px rgba(0,0,0,0.25);
+    -moz-box-shadow: 30px 6px 52px -37px rgba(0,0,0,0.25);
+    box-shadow: 30px 6px 52px -37px rgba(0,0,0,0.25);
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 100000;
+    color: #2A363B;
+}
+.navbar__logo-holder{
+    width: 100%;
+    height: 12%;
+    align-content: center;
+    justify-content: center;
+}
+.navbar__logo-holder__main-hold{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+}
+.navbar__logo-holder__main-hold img{
+    height: 44px;
+    align-self: center;
+}
+.navbar__logo-holder p{
+    font-size: 24px;
+    color: var(--cblack);
+    font-weight: 500;
+    display:inline-block;
+    align-self: center;
+
+}
+.navbar__logo-holder span{
+    font-size: 24px;
+    color: var(--cred);
+
+}
+.red {
+    fill: #000000;
+}
+
+.navbar__logo-holder__down-stripe{
+    width: 100%;
+    height: 2px;
+    background-color: #C4C4C4;
+}
+.navbar__buttons-holder{
+    width:100%;
+    margin-top: 40px;
+    
+}
+.navbar__buttons-holder__button{
+    width: 100%;
+    height:55px;
+    display: flex;
+}
+.navbar__buttons-holder__button a{
+    width:100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--cblack);
+    font-weight: 500;
+    font-size: 18px;
+}
+.navbar__buttons-holder__button-movement{
+    position: relative;
+    display: flex;
+    align-content: center;
+    background-color: none;
+    border-top-right-radius:12px ;
+    border-bottom-right-radius: 12px;
+    width: 75%;
+    height: 100%;
+    z-index: 4;
+    
+}
+.navbar__buttons-holder__button-movement:hover:after{
+    position: absolute;
+    background-color:var(--cred);
+    border-top-right-radius:12px ;
+    border-bottom-right-radius: 12px;
+    width: 75%;
+    height: 100%;
+    z-index: 10;
+}
+.navbar__buttons-holder__button-movement svg{
+    align-self: center;
+    margin-left: 30px;
+}
+
+.navbar__buttons-holder__button-movement span{
+    font-size: 18px;
+    font-weight: medium;
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+    margin-left: 6px;
+}
+
+.navbar__buttons-holder__button-movement::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 115%;
+  height: 100%;
+  background: var(--cred);
+  transform: scaleX(0) ;
+  transition: transform .7s;
+  border-top-right-radius:12px ;
+  border-bottom-right-radius: 12px;
+  z-index: -100000;
+  visibility: hidden;
+}
+
+
+.navbar__buttons-holder__button a:hover  .navbar__buttons-holder__button-movement::before{
+    transform: scaleX(1);
+    transform-origin: left;
+    visibility: visible;
+    transition: transform .7s;
+
+}
+.navbar__buttons-holder__button a:hover .white-svg{
+    fill:white;
+}
+.navbar__buttons-holder__button a:hover{
+    color:white;
+    transition: 0,7s;
+}
+
+.navbar__buttons-holder__button a:hover .navbar__buttons-holder__button-movement::after{
+    transform: translate3d(0,0,0);
+    visibility: hidden;
+    transition: transform .7s;
+
+}
+
+.navbar__account-holder{
+    height: 95px;
+    width: 100%;
+    background-color: var(--cpink);
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    position:absolute;
+    bottom:0;
+}
+.navbar__account-holder__account{
+    height: 72px;
+    width: 88%;
+    background-color: white;
+    align-self: center;
+    border-radius: 12px;
+    display: flex;
+}
+.navbar__account-holder__account-circle{
+    position: relative;
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    align-self: center;
+    background-color: #C4C4C4;
+    margin-left: 10px;
+}
+
+.navbar__account-holder__account-circle::after{
+    position:absolute;
+    content:'';
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+    border: 1px solid var(--cblack);
+}
+
+.navbar__account-holder__account-text{
+    align-content: center;
+    margin-left: 5px;
+    display: flex;
+    margin-top: 7px;
+}
+.navbar__account-holder__account-text p{
+    display: inline-block;
+    color: var(--cblack);
+    font-weight: 500;
+    font-size:14px;
+}
+.navbar__account-holder__account-text span{
+    color: var(--cblack);
+    opacity: 0.65;
+}

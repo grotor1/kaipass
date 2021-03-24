@@ -1,0 +1,72 @@
+:root {
+    --cblack: #2A363B;
+    --cred: #E84A5F;
+    --cpink: #FF847C;
+    --cgray: #F2F2F2;
+}
+
+body{
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+    width: 100%;
+    height: 90vh;
+}
+.App{
+  width:100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  z-index:100;
+  background-color:white;
+  justify-content: center;
+}
+
+.App-Wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    height:90%;
+    width: 1440px;
+    position: absolute;
+    z-index: 1000;
+    -webkit-box-shadow: -1px 8px 58px 5px rgba(0,0,0,0.25);
+    -moz-box-shadow: -1px 8px 58px 5px rgba(0,0,0,0.25);
+    box-shadow: -1px 8px 58px 5px rgba(0,0,0,0.25);
+}
+
+.left-section{
+  height: 100vh;
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+}
+.left-section__footer{
+  position:absolute;
+  z-index:1000;
+    bottom: 0;
+  width:100%;
+}
+
+.left-section__footer__patch{
+    width: 100%;
+    height: 5px;
+    background-color: #2A363B;
+    position: absolute;
+    bottom: 0;
+    z-index: 100000;
+}
+
+.left-section__footer img{
+  width:100%;
+  height: 100%;
+}
+
+.left-section__footer__patch{
+    width: 100%;
+    height: 5px;
+    background-color: #2A363B;
+    position: absolute;
+    bottom: 0;
+}

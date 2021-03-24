@@ -1,0 +1,19 @@
+.header{
+    position: relative;
+    z-index: 10000;
+    flex-basis: 100%;
+    height: 70px;
+    background-color: white;
+    -webkit-box-shadow: 0px 8px 18px -6px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 8px 18px -6px rgba(0,0,0,0.25);
+    box-shadow: 0px 8px 18px -6px rgba(0,0,0,0.25);
+}
+.header__notifications-button{
+    position: absolute;
+    border-radius: 50%;
+    right:30px;
+    top:20px;
+    width:30px;
+    height: 30px;
+    background-color: #FF847C;
+}

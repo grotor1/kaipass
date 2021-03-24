@@ -1,0 +1,50 @@
+.white-background{
+    background-color: #E5E5E5;
+}
+
+.lesson-page-wrapper__left-section__content__courses-list__item{
+    width: 100%;
+    height: 160px;
+    background-color:;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.lesson-page-wrapper__left-section__content__courses-list__item-lesson{
+    height: 100%;
+    width: 160px;
+
+}
+.lesson-page-wrapper__left-section__content__courses-list__item-lesson p{
+    font-weight: 500;
+    text-align: center;
+}
+.lesson-page-wrapper__left-section__content__courses-list__item-lesson__circle{
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    border:10px solid var(--cred) ;
+}
+.lesson-page-wrapper__left-section__content__courses-list__item-lesson__circle-pointer{
+    color: white;
+    text-align: center;
+    position: absolute;
+    font-size: 24px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius:50% ;
+    background-color: var(--cpink);
+    top: 85px;
+    left: 33px;
+}
+.lesson-page-wrapper__left-section__content__courses-list__item-lesson__circle-pointer p{
+    font-size: 24px;
+    position: absolute;
+    top: -23px;
+}
