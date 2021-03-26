@@ -22,6 +22,19 @@ const RegPage = () => {
     const changeHandler = event => {
         if (event.target.value) {
             document.getElementById(event.target.name + "Label").innerText = ""
+        } else {
+            if (event.target.name === "login") {
+                document.getElementById(event.target.name + "Label").innerText = "Логин"
+            }
+            if(event.target.name === "password"){
+                document.getElementById(event.target.name + "Label").innerText = "Пароль"
+            }
+            if(event.target.name === "email"){
+                document.getElementById(event.target.name + "Label").innerText = "Почта"
+            }
+            if(event.target.name === "passwordRep"){
+                document.getElementById(event.target.name + "Label").innerText = "Повторите пароль"
+            }
         }
         setForm({...form, [event.target.name]: event.target.value})
     }

@@ -21,6 +21,14 @@ export const LoginPage = () => {
         if(event.target.value){
             document.getElementById(event.target.name + "Label").innerText = ""
         }
+        else{
+            if(event.target.name === "login"){
+                document.getElementById(event.target.name + "Label").innerText = "Логин"
+            }
+            if(event.target.name === "password"){
+                document.getElementById(event.target.name + "Label").innerText = "Пароль"
+            }
+        }
         setForm({...form, [event.target.name]: event.target.value})
     }
     useEffect(() => {
