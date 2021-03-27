@@ -1,9 +1,9 @@
-.lesson-page-wrapper > p{
+.my-courses-wrapper > p{
     margin: 0;
     font-weight: 500;
 }
 
-.lesson-page-wrapper{
+.my-courses-wrapper{
     position: relative;
     display:flex;
     z-index: 100;
@@ -231,7 +231,6 @@
 
 .my-courses-wrapper__left-section__content__courses-list{
     width: 90%;
-    height: 90%;
     margin: 5% 5%;
     position: relative;
     overflow: auto;
@@ -240,7 +239,6 @@
     width: 98%;
     height: 200px;
     margin-top: 20px;
-    margin-bottom: 20px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0px 4px 18px -5px rgba(0, 0, 0, 0.25);

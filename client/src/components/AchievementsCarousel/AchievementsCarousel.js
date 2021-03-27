@@ -13,16 +13,14 @@ const AchievementsCarousel = () => {
     const [achievements, setAchievements] = useState([]);
     const {loading, request, error, clearError} = useHttp();
     useEffect(() => {
-        message(error)
-        clearError()
-    }, [error, message, clearError])
-    useEffect(()=>{
-        const dataFromServer = async () =>{
-            const {data} = await request(`api/fetch/usersInfGet/${auth._id_userInf}`, 'GET')
+        const dataFromServer = async () => {
+            const {data} = await request(`/api/fetch/usersInfGet/${auth._id_userInf}`, 'GET')
             const currentAchievements = data.achievements
             const stateAchievements = []
-            currentAchievements.map(async element => {
-                const achievementsData = await request(`api/fetch/achievementsGet/${element._id_achievements}`, 'GET')
+            for (let i = 0; i < currentAchievements.length; i++) {
+                const element = currentAchievements[i]
+                console.log(element._id_achievements)
+                const achievementsData = await request(`/api/fetch/achievementsGet/${element._id_achievements}`, 'GET')
                 stateAchievements.push({
                     _id: element._id_achievements,
                     name: achievementsData.data.name,
@@ -30,82 +28,43 @@ const AchievementsCarousel = () => {
                     maxValue: achievementsData.data.maxValue,
                     currentValue: element.currentValue
                 })
-            })
+            }
             setAchievements(stateAchievements)
         }
         dataFromServer()
-    },[request, auth])
+    }, [request, auth])
     return (
         <Carousel itemsToShow={3} itemsToScroll={1}>
-                    <item>
-                        <div className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive">
-                            <div
-                                className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__border-top">
+            {achievements.map(element => {
 
-                            </div>
-                            <div
-                                className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__text">
+                    return (
+                        <item>
+                            <div className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive">
+                                <div
+                                    className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__border-top">
 
-                                <p>я</p>
-                                <span><p>хер</p></span>
-
-                            </div>
-                            <div
-                                className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__text__progressbar">
-                                <div className="progressbar-2">
-                                    <span></span>
                                 </div>
-                                <p>1/10</p>
+                                <div
+                                    className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__text">
+
+                                    <p>{element.name}</p>
+                                    <span><p>{element.desc}</p></span>
+
+                                </div>
+                                <div
+                                    className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__text__progressbar">
+                                    <div className="progressbar-2">
+                                    </div>
+                                    <p>{element.currentValue}/{element.maxValue}</p>
+                                </div>
                             </div>
-                        </div>
-                    </item>
-            <item>
-                <div className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive">
-                    <div
-                        className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__border-top">
+                        </item>
 
-                    </div>
-                    <div
-                        className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__text">
+                    )
 
-                        <p>я</p>
-                        <span><p>хер</p></span>
-
-                    </div>
-                    <div
-                        className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__text__progressbar">
-                        <div className="progressbar-2">
-                            <span></span>
-                        </div>
-                        <p>1/10</p>
-                    </div>
-                </div>
-            </item>
-            <item>
-                <div className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive">
-                    <div
-                        className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__border-top">
-
-                    </div>
-                    <div
-                        className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__text">
-
-                        <p>я</p>
-                        <span><p>хер</p></span>
-
-                    </div>
-                    <div
-                        className="mainpage-wrapper__left-section__achivments-block__content__carousel-achive__text__progressbar">
-                        <div className="progressbar-2">
-                            <span></span>
-                        </div>
-                        <p>1/10</p>
-                    </div>
-                </div>
-            </item>
+            })}
         </Carousel>
     )
-
 }
 
 export default AchievementsCarousel

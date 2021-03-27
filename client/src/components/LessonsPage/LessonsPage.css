@@ -1,11 +1,23 @@
 .white-background{
     background-color: #E5E5E5;
 }
+.lesson-page-wrapper > p{
+    margin: 0;
+    font-weight: 900;
+}
+
+.lesson-page-wrapper{
+    position: relative;
+    display:flex;
+    z-index: 100;
+    flex-basis: 100%;
+    background-color: var(--cgray);
+    height: calc(100% - 70px);
+}
 
 .lesson-page-wrapper__left-section__content__courses-list__item{
     width: 100%;
     height: 160px;
-    background-color:;
     display: flex;
     justify-content: space-around;
     margin-top: 10px;

@@ -5,9 +5,11 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import MainPage from "./components/MainPage/MainPage";
 import MyCourses from "./components/MyCourses/MyCourses";
 import LessonsPage from "./components/LessonsPage/LessonsPage";
+import AchievementsPage from "./components/AchievementsPage/AchievementsPage";
 import Navbar from "./components/Navbar/Navbar";
 import Header from "./components/Header/Header";
 import footer from "./media/Footer_Frame.svg";
+import ShopPage from "./components/ShopPage/ShopPage";
 
 export const useRoutes = isAuth => {
     if(isAuth){
@@ -17,14 +19,20 @@ export const useRoutes = isAuth => {
                 <div className="left-section">
                     <Header/>
                     <Switch>
+                        <Route path="/shop">
+                            <ShopPage/>
+                        </Route>
                         <Route path="/main">
                             <MainPage/>
                         </Route>
                         <Route path="/courses" exact>
                             <MyCourses/>
                         </Route>
-                        <Route path="/lessons">
+                        <Route path="/lessons/:_id">
                             <LessonsPage/>
+                        </Route>
+                        <Route path="/ach">
+                            <AchievementsPage/>
                         </Route>
                         <Redirect to="/main"/>
                     </Switch>

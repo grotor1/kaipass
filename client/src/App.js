@@ -18,6 +18,7 @@ function App() {
                 <div className="App">
                         {routes}
                 </div>
+                <div className="left-section__footer__patch"></div>
             </Router>
         </AuthContext.Provider>
     );

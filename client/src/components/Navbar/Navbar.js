@@ -14,10 +14,6 @@ const Navbar = (props) => {
     const message = useMessage()
     const [userInf, setUserInf] = useState({});
     const {loading, request, error, clearError} = useHttp();
-    useEffect(() => {
-        message(error)
-        clearError()
-    }, [error, message, clearError])
     useEffect(()=>{
         const dataFromServer = async () =>{
             const {data} = await request(`api/fetch/usersInfGet/${auth._id_userInf}`, 'GET')
@@ -36,7 +32,7 @@ const Navbar = (props) => {
             </div>
             <div className="navbar__buttons-holder">
                 <div className="navbar__buttons-holder__button">
-                    <Link to={`main/`}>
+                    <Link to="/main">
                         <div className="navbar__buttons-holder__button-movement">
                             <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path className="white-svg"
@@ -58,27 +54,6 @@ const Navbar = (props) => {
                 </div>
                 <div className="navbar__buttons-holder__button">
                     <Link to={`/courses`}>
-                        <div className="navbar__buttons-holder__button-movement">
-                            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path className="white-svg"
-                                      d="M8 10H4C2.9 10 2 9.1 2 8V4C2 2.9 2.9 2 4 2H8C9.1 2 10 2.9 10 4V8C10 9.1 9.1 10 8 10Z"
-                                      fill={svgBlack}/>
-                                <path className="white-svg"
-                                      d="M20 10H16C14.9 10 14 9.1 14 8V4C14 2.9 14.9 2 16 2H20C21.1 2 22 2.9 22 4V8C22 9.1 21.1 10 20 10Z"
-                                      fill={svgBlack}/>
-                                <path className="white-svg"
-                                      d="M8 22H4C2.9 22 2 21.1 2 20V16C2 14.9 2.9 14 4 14H8C9.1 14 10 14.9 10 16V20C10 21.1 9.1 22 8 22Z"
-                                      fill={svgBlack}/>
-                                <path className="white-svg"
-                                      d="M20 22H16C14.9 22 14 21.1 14 20V16C14 14.9 14.9 14 16 14H20C21.1 14 22 14.9 22 16V20C22 21.1 21.1 22 20 22Z"
-                                      fill={svgBlack}/>
-                            </svg>
-                            <span>Курсы</span>
-                        </div>
-                    </Link>
-                </div>
-                <div className="navbar__buttons-holder__button">
-                    <Link to="/lessons">
                         <div className="navbar__buttons-holder__button-movement">
                             <svg width="19" height="24" viewBox="0 0 19 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -104,12 +79,12 @@ const Navbar = (props) => {
                                       d="M3.33936 12.0579H6.76509C6.78481 12.0589 6.80454 12.0589 6.82427 12.0579C7.12589 12.0417 7.35721 11.7858 7.34085 11.4865V8.40105C7.34085 8.08548 7.08308 7.82967 6.76509 7.82967H3.33936C3.02137 7.82967 2.7636 8.08548 2.7636 8.40105V11.4865C2.76256 11.5061 2.76256 11.5257 2.7636 11.5452C2.77997 11.8446 3.03773 12.0741 3.33936 12.0579ZM3.91512 8.97244H6.18933V10.9151H3.91512V8.97244Z"
                                       fill="#29363B" fill-opacity="0.7"/>
                             </svg>
-                            <span>Задания</span>
+                            <span>Курсы</span>
                         </div>
                     </Link>
                 </div>
                 <div className="navbar__buttons-holder__button">
-                    <Link to="/">
+                    <Link to="/ach">
                         <div className="navbar__buttons-holder__button-movement">
                             <svg className="white-svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +142,7 @@ const Navbar = (props) => {
                     </Link>
                 </div>
                 <div className="navbar__buttons-holder__button">
-                    <Link to="/">
+                    <Link to="/shop">
                         <div className="navbar__buttons-holder__button-movement">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">

@@ -12,7 +12,7 @@ const AchievementsSchema = new Schema({
         unique: true
     },
     maxValue: {
-        type: String,
+        type: Number,
         required: true,
         unique: false
     }

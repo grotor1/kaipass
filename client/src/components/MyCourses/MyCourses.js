@@ -8,6 +8,7 @@ import './hover.css'
 import {AuthContext} from "../../context/AuthContext";
 import {useMessage} from "../../hooks/message.hook";
 import {useHttp} from "../../hooks/http.hook";
+import {withRouter, Link} from "react-router-dom";
 
 const container = document.querySelector('container');
 const ps = new PerfectScrollbar(container);
@@ -19,32 +20,29 @@ const MyCourses = () => {
     const [courses, setCourses] = useState([]);
     const {loading, request, error, clearError} = useHttp();
     useEffect(() => {
-        message(error)
-        clearError()
-    }, [error, message, clearError])
-    useEffect(()=>{
-        const dataFromServer = async () =>{
+        const dataFromServer = async () => {
             const {data} = await request(`api/fetch/usersInfGet/${auth._id_userInf}`, 'GET')
             const currentCourses = data.courses
             const stateLessons = []
-            currentCourses.map(async element => {
+            for (let i = 0; i < currentCourses.length; i++) {
+                const element = currentCourses[i]
                 const {data} = await request(`api/fetch/coursesGet/${element._id_courses}`)
                 stateLessons.push(data)
-            })
-
+            }
             setCourses(stateLessons)
         }
         dataFromServer()
-    },[request, auth])
+    }, [request, auth])
     return (
         <div className="my-courses-wrapper">
             <div className="my-courses-wrapper__left-section">
                 <div className="my-courses-wrapper__left-section__title">
-                    <p>Мои курсы: <span>nnn</span></p>
+                    <p>Мои курсы: <span>{courses.length}</span></p>
                 </div>
                 <div className="my-courses-wrapper__left-section__content white-background">
                     <PerfectScrollbar>
-
+                        {courses.map(element => {
+                            return (
                                 <div id="container"
                                      className="my-courses-wrapper__left-section__content__courses-list scrollbar-primary">
                                     <div
@@ -55,74 +53,24 @@ const MyCourses = () => {
                                         </div>
                                         <div
                                             className="my-courses-wrapper__left-section__content__courses-list__item__title">
-                                            <p>Я<br/>
+                                            <p>{element.name}<br/>
                                                 <span>
-                                                Кол-во часов: 10 ч<br/>
-                                                Участники: 12333<br/>
+                                                Кол-во часов: {element.hours} ч<br/>
+                                                Участники: {element.usersCount}<br/>
                                             </span>
                                             </p>
                                         </div>
-                                        <a href="">
+                                        <Link to={`/lessons/${element._id}`}>
                                             <div
                                                 className="my-courses-wrapper__left-section__content__courses-list__item__button hvr-forward">
                                                 <p>Продолжить</p>
                                                 <img src={arrow_course} alt=""/>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
-                        <div id="container"
-                             className="my-courses-wrapper__left-section__content__courses-list scrollbar-primary">
-                            <div
-                                className="my-courses-wrapper__left-section__content__courses-list__item first-item">
-                                <div
-                                    className="my-courses-wrapper__left-section__content__courses-list__item__image">
-                                    <img src="" alt=""/>
-                                </div>
-                                <div
-                                    className="my-courses-wrapper__left-section__content__courses-list__item__title">
-                                    <p>Я<br/>
-                                        <span>
-                                                Кол-во часов: 10 ч<br/>
-                                                Участники: 12333<br/>
-                                            </span>
-                                    </p>
-                                </div>
-                                <a href="">
-                                    <div
-                                        className="my-courses-wrapper__left-section__content__courses-list__item__button hvr-forward">
-                                        <p>Продолжить</p>
-                                        <img src={arrow_course} alt=""/>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div id="container"
-                             className="my-courses-wrapper__left-section__content__courses-list scrollbar-primary">
-                            <div
-                                className="my-courses-wrapper__left-section__content__courses-list__item first-item">
-                                <div
-                                    className="my-courses-wrapper__left-section__content__courses-list__item__image">
-                                    <img src="" alt=""/>
-                                </div>
-                                <div
-                                    className="my-courses-wrapper__left-section__content__courses-list__item__title">
-                                    <p>Я<br/>
-                                        <span>
-                                                Кол-во часов: 10 ч<br/>
-                                                Участники: 12333<br/>
-                                            </span>
-                                    </p>
-                                </div>
-                                <a href="">
-                                    <div
-                                        className="my-courses-wrapper__left-section__content__courses-list__item__button hvr-forward">
-                                        <p>Продолжить</p>
-                                        <img src={arrow_course} alt=""/>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            )
+                        })}
                     </PerfectScrollbar>
                 </div>
             </div>
@@ -190,4 +138,4 @@ const MyCourses = () => {
     )
 }
 
-export default MyCourses
+export default withRouter(MyCourses)
