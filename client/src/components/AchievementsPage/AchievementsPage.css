@@ -1,0 +1,103 @@
+.achievements-page-wrapper{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 100;
+    flex-basis: 100%;
+    background-color: var(--cgray);
+    height: calc(100% - 70px);
+}
+
+.scrollbar-container{
+    width: 100%;
+}
+.achievements-page-wrapper__main-section{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 94%;
+    max-height: 600px;
+    margin: 0 auto;
+
+}
+.achievements-page-wrapper__header{
+    display: inline-block;
+    width: 94%;
+    height: 90px;
+    margin: 0 auto;
+    font-size: 28px;
+}
+.achievements-page-wrapper__main-section__container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.achievements-page-wrapper__main-section__container__item{
+    width: 30%;
+    height: 200px;
+    margin-right: 3.3333%;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    box-sizing: border-box;
+
+}
+.achievements-page-wrapper__main-section__container__item__score{
+    background-color: #E84A5F;
+    height: 90px;
+    width: 50px;
+    position: absolute;
+    right: 20px;
+    z-index: 10;
+}
+.achievements-page-wrapper__main-section__container__item__score p{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin: 7px 20px 0px;
+}
+.achievements-page-wrapper__main-section__container__item__score img{
+    width: 24px;
+    height: 24px;
+    margin: 0 13px;
+}
+.achievements-page-wrapper__main-section__container__item__score-after{
+    background-color: white;
+    width: 37px;
+    height: 37px;
+    top: 70px;
+    left: 7px;
+    position: absolute;
+    transform: rotateZ(45deg);
+
+}
+.achievements-page-wrapper__main-section__container__item__name{
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+}
+.achievements-page-wrapper__main-section__container__item__task{
+    font-size: 14px;
+    margin-left: 20px;
+    line-height: 16px;
+    max-width: 60%;
+    height: 90px;
+
+}
+.achievements-page-wrapper__main-section__container__item__progressbar{
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+    margin-right: 20px;
+
+}
+
+.faith{
+    opacity: .75;
+}
